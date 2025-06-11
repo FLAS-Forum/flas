@@ -168,4 +168,7 @@ body {
 .spezial-link:hover {
   text-decoration: underline;
 }
+#disqus_thread + div {
+  display: none !important;
+}
 
