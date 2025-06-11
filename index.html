@@ -96,6 +96,11 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
 
 <!-- Disqus -->
 <div id="disqus_thread"></div>
+    <div id="disqus-placeholder" style="display: none; padding: 1em; border: 1px solid #ccc; background-color: #f9f9f9;">
+  <p>Kommentare sind nur sichtbar, wenn Sie Tracking-Cookies erlaubt haben.</p>
+  <p><a href="#" id="open_preferences_center">Cookie-Einstellungen ändern</a></p>
+</div>
+
 <script type="text/plain" data-cookie-consent="tracking">
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -128,6 +133,18 @@ cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","pal
 
 <a href="#" id="open_preferences_center">Update cookies preferences</a>
   </div>
- 
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Prüfen, ob Tracking erlaubt wurde
+    const trackingAccepted = document.cookie.includes('cookieconsent_status=allow');
+    
+    // Wenn Tracking NICHT erlaubt ist, zeige den Platzhalter
+    if (!trackingAccepted) {
+      const placeholder = document.getElementById('disqus-placeholder');
+      if (placeholder) placeholder.style.display = 'block';
+    }
+  });
+</script>
+
 </body>
 </html>
