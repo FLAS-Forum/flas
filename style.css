@@ -75,120 +75,143 @@ body {
   text-decoration: none;
 }
 
-/* --- Text + Bild --- */
-.text-bild-container {
-  margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
+/* --- Allgemeine Section Styles --- */
+section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.textbereich, .bildbereich {
+/* --- Text + Bild --- */
+.text-bild-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.textbereich {
   flex: 1 1 300px;
   min-width: 300px;
-  max-width: 50%;
-  padding: 15px;
+  max-width: 600px;
+}
+
+.bildbereich {
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .bildbereich img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  display: block;
-  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .bildbereich img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 /* --- Video + Text --- */
 .video-text-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
-  margin-bottom: 40px;
 }
 
-.video-bereich, .videotext-bereich {
+.video-bereich {
   flex: 1 1 300px;
   min-width: 300px;
-  max-width: 50%;
-  padding: 15px;
+  max-width: 500px;
 }
 
 .video-bereich video {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  display: block;
-  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   transition: box-shadow 0.3s;
 }
 
 .video-bereich video:hover {
-  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.videotext-bereich h2, .videotext-bereich h3 {
-  margin-top: 0;
+.videotext-bereich {
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 600px;
 }
 
-/* --- Neuer Abschnitt --- */
-.neuer-abschnitt {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
+/* --- Produkt Cards --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.product-card {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transition: box-shadow 0.3s;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.neuer-abschnitt:hover {
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-.neuer-abschnitt h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.product-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
-.neuer-abschnitt p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.product-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #444;
 }
 
-/* --- Links --- */
+.product-card .price {
+  font-weight: 700;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+/* --- Weitere Links --- */
 .links-abschnitt {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .spezial-link {
+  display: inline-block;
   color: #007bff;
   text-decoration: none;
   font-size: 1.1rem;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  transition: 0.3s, border-bottom-color 0.3s;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid #007bff;
+  transition: 0.3s, color 0.3s, background-color 0.3s;
 }
 
 .spezial-link:hover {
-  border-bottom-color: #007bff;
-  color: #0056b3;
+  background-color: #007bff;
+  color: #fff;
 }
 
 /* --- Kommentarbereich --- */
@@ -197,8 +220,8 @@ body {
   margin: 60px auto;
   padding: 25px;
   background-color: #fdfdfd;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   transition: box-shadow 0.3s;
 }
 
@@ -215,16 +238,25 @@ body {
   }
 
   .text-bild-container, .video-text-container {
-    gap: 10px;
+    gap: 15px;
+  }
+
+  .product-grid {
+    gap: 15px;
+  }
+
+  .links-abschnitt {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
 @media (min-width: 1200px) {
   .bildbereich {
-    max-width: 30%;
+    max-width: 35%;
   }
 
   .textbereich {
-    max-width: 70%;
+    max-width: 60%;
   }
-    }
+}
