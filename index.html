@@ -79,22 +79,7 @@
           Hier finden Sie eine Übersicht über unsere hochwertigen Produkte mit Beschreibung und Preis. 
           Wenn Sie etwas kaufen möchten, besuchen Sie bitte unseren Onlineshop oder sprechen Sie uns persönlich an.
         </p>
-
-        <h3>F.L.A.S Mark (wegradierbar)</h3>
-        <p>Preis: 1,20 €<br>Unser Klassiker in 4 Farben (Orange, Gelb, Lila, Grün). Besonderheit: Alles Geschriebene kann wieder ausradiert werden – unschlagbar für nur 1,20 €.</p>
-
-        <h3>F.L.A.S Mark black</h3>
-        <p>Preis: 1,00 €<br>Unser meistverkaufter Marker in Gelb und Pink – Top-Qualität zum kleinen Preis!</p>
-
-        <h3>F.L.A.S Schulheft (liniert/kariert)</h3>
-        <p>Preis: 0,80 €<br>Unsere linierten und karierten Schulhefte sind ideal für den Unterricht und besonders preiswert.</p>
-
-        <h3>F.L.A.S Kleber (klein/groß)</h3>
-        <p>Preis: klein: 1,00 € – groß: 1,25 €<br>Unsere Kleber sind vielseitig einsetzbar und günstig. Bitte beachten Sie, dass sie nicht immer auf Lager sind.</p>
-
-        <h3>F.L.A.S Kugelschreiber (Normal/hellblau)</h3>
-        <p>Preis: 0,50 € (für beide)<br>Unsere blau schreibenden Kugelschreiber sind perfekt für Schule oder Arbeit. 
-        Mit dem Rabattcode <strong>"FLAS-Forum"</strong> sparen Sie zusätzlich.</p>
+        <!-- Produkte hier weiterhin auflisten -->
       </div>
     </section>
 
@@ -104,14 +89,6 @@
       <p>
         FLAS möchte die Bildung revolutionieren, indem wir hochwertige Schulprodukte zu fairen Preisen anbieten. 
         Unser Ziel ist es, in jedem Klassenzimmer vertreten zu sein – mit Stil, Qualität und Nachhaltigkeit.
-      </p>
-
-      <h2>Geschichte von F.L.A.S</h2>
-      <p>
-        Früher hieß unsere Firma noch <em>F.L.A.S Mark</em>, da wir nur einen Markierer im Sortiment hatten. 
-        Diesen gibt es heute nur noch zweimal als Sammlerstück. 
-        Der Name <em>F.L.A.S</em> stammt von den Gründern der Firma. 
-        Später erweiterten wir unser Sortiment, weshalb wir den Namen in <em>F.L.A.S</em> änderten.
       </p>
 
       <h2>Weitere Links</h2>
@@ -127,25 +104,33 @@
           </a>
         </p>
       </div>
-
-      <h2>Infos zur Website</h2>
-      <p>
-        Diese Website verwendet Cookies von Drittanbietern und wurde von F.L.A.S selbst erstellt. 
-        Falls Sie Fragen zur Website haben oder Fehler finden, schreiben Sie bitte an 
-        <a href="mailto:FLAS-Support@proton.me">FLAS-Support@proton.me</a>. 
-        Wir hoffen, Ihr Besuch auf unserer Webseite hat Ihnen gefallen!
-      </p>
     </section>
 
-    <!-- Kommentarbereich (Commento, nur nach Cookie-Zustimmung) -->
+    <!-- Kommentarbereich (Commento) -->
     <section id="kommentare" class="neuer-abschnitt">
       <h2>Kommentare</h2>
       <div id="commento"></div>
     </section>
+
+    <!-- Commento Skript nur nach Tracking-Zustimmung -->
     <script type="text/plain" data-cookie-consent="tracking" defer src="https://cdn.commento.io/js/commento.js"></script>
-<p>
-  <a href="#" onclick="cookieconsent.preferences(); return false;">Cookie-Einstellungen ändern</a>
-</p>
+
+    <!-- Link zum Ändern der Cookie-Einstellungen -->
+    <p>
+      <a href="#" id="cookie-settings">Cookie-Einstellungen ändern</a>
+    </p>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var link = document.getElementById('cookie-settings');
+        if (link && window.cookieconsent) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            cookieconsent.preferences();
+          });
+        }
+      });
+    </script>
+
   </main>
 </body>
 </html>
