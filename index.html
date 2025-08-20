@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FLAS-Forum – Hochwertige Schulprodukte</title>
 
+  <!-- SEO -->
   <meta name="description" content="FLAS-Forum – Das Forum für hochwertige Schulprodukte von F.L.A.S. Kugelschreiber, Marker, Hefte und mehr. Infos, Rabatte und Neuigkeiten zu unseren Produkten.">
-  <meta name="keywords" content="FLAS, Schulprodukte, Kugelschreiber, Marker, Hefte, Kleber, Forum, Onlineshop, günstig, Schule, FLAS-Shop">
   <meta name="author" content="F.L.A.S">
   <meta name="robots" content="index, follow">
 
@@ -22,15 +22,20 @@
 
   <link rel="stylesheet" href="style.css">
   <meta name="referrer" content="no-referrer">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
-    <h1>FLAS-Forum</h1>
-    <a class="shop-link" href="https://sites.google.com/view/flas-onlineshop/" target="_blank" title="Zum FLAS-Onlineshop">FLAS-Shop</a>
+    <h1 class="title">FLAS-Forum</h1>
+    <a class="shop-link" href="https://sites.google.com/view/flas-onlineshop/" target="_blank" rel="noopener noreferrer" title="Zum FLAS-Onlineshop">FLAS-Shop</a>
   </header>
 
   <main class="content">
-    <!-- Bild + Text -->
+
+    <!-- Willkommen -->
     <section class="text-bild-container">
       <div class="textbereich">
         <h2>Willkommen im FLAS-Forum!</h2>
@@ -46,10 +51,10 @@
       </div>
     </section>
 
-    <!-- Video + Text -->
+    <!-- Video + Produkte -->
     <section class="video-text-container">
       <div class="video-bereich">
-        <video controls>
+        <video controls preload="metadata">
           <source src="videos/intro.mp4" type="video/mp4">
           Dein Browser unterstützt das Video-Tag nicht. Bitte benutze einen anderen Browser! 
           Für weitere Fragen wenden Sie sich an <a href="mailto:FLAS-Support@proton.me">FLAS-Support@proton.me</a>.
@@ -62,24 +67,45 @@
           Wenn Sie etwas kaufen möchten, besuchen Sie bitte unseren Onlineshop oder sprechen Sie uns persönlich an.
         </p>
 
-        <h3>F.L.A.S Mark (wegradierbar)</h3>
-        <p>Preis: 1,20 €<br>Unser Klassiker in 4 Farben (Orange, Gelb, Lila, Grün). Besonderheit: Alles Geschriebene kann wieder ausradiert werden – unschlagbar für nur 1,20 €.</p>
+        <!-- Produkt Grid -->
+        <div class="product-grid">
 
-        <h3>F.L.A.S Mark black</h3>
-        <p>Preis: 1,00 €<br>Unser meistverkaufter Marker in Gelb und Pink – Top-Qualität zum kleinen Preis!</p>
+          <div class="product-card">
+            <h3>F.L.A.S Mark (wegradierbar)</h3>
+            <p class="price">Preis: 1,20 €</p>
+            <p>Unser Klassiker in 4 Farben (Orange, Gelb, Lila, Grün). Besonderheit: Alles Geschriebene kann wieder ausradiert werden – unschlagbar für nur 1,20 €.</p>
+          </div>
 
-        <h3>F.L.A.S Schulheft (liniert/kariert)</h3>
-        <p>Preis: 0,80 €<br>Unsere linierten und karierten Schulhefte sind ideal für den Unterricht und besonders preiswert.</p>
+          <div class="product-card">
+            <h3>F.L.A.S Mark black</h3>
+            <p class="price">Preis: 1,00 €</p>
+            <p>Unser meistverkaufter Marker in Gelb und Pink – Top-Qualität zum kleinen Preis!</p>
+          </div>
 
-        <h3>F.L.A.S Kleber (klein/groß)</h3>
-        <p>Preis: klein: 1,00 € – groß: 1,25 €<br>Unsere Kleber sind vielseitig einsetzbar und günstig. Bitte beachten Sie, dass sie nicht immer auf Lager sind.</p>
+          <div class="product-card">
+            <h3>F.L.A.S Schulheft (liniert/kariert)</h3>
+            <p class="price">Preis: 0,80 €</p>
+            <p>Unsere linierten und karierten Schulhefte sind ideal für den Unterricht und besonders preiswert.</p>
+          </div>
 
-        <h3>F.L.A.S Kugelschreiber (Normal/hellblau)</h3>
-        <p>Preis: 0,50 € (für beide)<br>Unsere blau schreibenden Kugelschreiber sind perfekt für Schule oder Arbeit. Mit dem Rabattcode <strong>"FLAS-Forum"</strong> sparen Sie zusätzlich.</p>
+          <div class="product-card">
+            <h3>F.L.A.S Kleber (klein/groß)</h3>
+            <p class="price">Preis: klein 1,00 € – groß 1,25 €</p>
+            <p>Unsere Kleber sind vielseitig einsetzbar und günstig. Bitte beachten Sie, dass sie nicht immer auf Lager sind.</p>
+          </div>
+
+          <div class="product-card">
+            <h3>F.L.A.S Kugelschreiber (Normal/hellblau)</h3>
+            <p class="price">Preis: 0,50 €</p>
+            <p>Unsere blau schreibenden Kugelschreiber sind perfekt für Schule oder Arbeit. 
+               Mit dem Rabattcode <strong>"FLAS-Forum"</strong> sparen Sie zusätzlich.</p>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- Neuer Abschnitt -->
+    <!-- Vision & Geschichte -->
     <section class="neuer-abschnitt">
       <h2>Unsere Vision für die Zukunft</h2>
       <p>
@@ -94,24 +120,20 @@
         Der Name <em>F.L.A.S</em> stammt von den Gründern der Firma. 
         Später erweiterten wir unser Sortiment, weshalb wir den Namen in <em>F.L.A.S</em> änderten.
       </p>
+    </section>
 
-      <h2>Weitere Links</h2>
-      <div class="links-abschnitt">
-        <p>
-          <a class="spezial-link" href="https://whatsapp.com/channel/0029VadHLGaFi8xZZTspbk1N" target="_blank" title="Zum offiziellen WhatsApp-Kanal von FLAS">
-            WhatsApp-Kanal
-          </a>
-        </p>
-        <p>
-          <a class="spezial-link" href="https://github.com/FLAS-Forum/flas/releases/download/Browser_1.0/FLAS-Browser.exe" target="_blank" title="FLAS-Browser herunterladen">
-            FLAS-Browser.exe
-          </a>
-        </p>
-      </div>
+    <!-- Weitere Links -->
+    <section class="links-abschnitt">
+      <a class="spezial-link" href="https://whatsapp.com/channel/0029VadHLGaFi8xZZTspbk1N" target="_blank" rel="noopener noreferrer" title="Zum offiziellen WhatsApp-Kanal von FLAS">
+        📱 WhatsApp-Kanal
+      </a>
+      <a class="spezial-link" href="https://github.com/FLAS-Forum/flas/releases/download/Browser_1.0/FLAS-Browser.exe" target="_blank" rel="noopener noreferrer" title="FLAS-Browser herunterladen">
+        💻 FLAS-Browser.exe
+      </a>
     </section>
 
     <!-- Kommentarbereich (Commento) -->
-    <section id="kommentare" class="neuer-abschnitt">
+    <section id="kommentare">
       <h2>Kommentare</h2>
       <div id="commento" data-no-cookie="true"></div>
     </section>
