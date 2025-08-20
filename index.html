@@ -21,24 +21,25 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="style.css">
-<!-- Cookie Consent by TermsFeed -->
-<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-  cookieconsent.run({
-    "notice_banner_type":"headline",
-    "consent_type":"express",
-    "palette":"light",
-    "language":"de",
-    "page_load_consent_levels":["strictly-necessary","tracking"],
-    "notice_banner_reject_button_hide":false,
-    "preferences_center_close_button_hide":false,
-    "page_refresh_confirmation_buttons":false,
-    "website_name":"FLAS-Forum",
-    "website_privacy_policy_url":"https://www.flas-forum.free.nf/datenschutz.html"
-  });
-});
-</script>
+
+  <!-- Cookie Consent by TermsFeed -->
+  <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    document.addEventListener('DOMContentLoaded', function () {
+      cookieconsent.run({
+        "notice_banner_type":"headline",
+        "consent_type":"express",
+        "palette":"light",
+        "language":"de",
+        "page_load_consent_levels":["strictly-necessary","tracking"],
+        "notice_banner_reject_button_hide":false,
+        "preferences_center_close_button_hide":false,
+        "page_refresh_confirmation_buttons":false,
+        "website_name":"FLAS-Forum",
+        "website_privacy_policy_url":"https://www.flas-forum.free.nf/datenschutz.html"
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="header">
@@ -53,8 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <h2>Willkommen im FLAS-Forum!</h2>
         <p>
           FLAS ist eine der besten Firmen für hochwertige Schulprodukte – von Kugelschreibern über Marker bis hin zu Heften. 
-          Alles ist extrem günstig und trotzdem hochwertig. Unser Ziel ist es, die führende Marke für Schulprodukte zu werden. 
-          Mit dem Rabattcode <strong>"FLAS-Forum"</strong> erhalten Sie 5&nbsp;Cent Rabatt. 
+          Alles ist extrem günstig und trotzdem hochwertig. Mit dem Rabattcode <strong>"FLAS-Forum"</strong> erhalten Sie 5&nbsp;Cent Rabatt. 
           In diesem Forum erfahren Sie mehr über unsere Firma und Produkte. 
           Außerdem können Sie unseren Onlineshop besuchen (oben rechts verlinkt). Viel Spaß beim Erkunden des FLAS-Forums!
         </p>
@@ -137,25 +137,13 @@ document.addEventListener('DOMContentLoaded', function () {
       </p>
     </section>
 
-    <!-- Cookie Consent by TermsFeed -->
-    <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
-    <script type="text/javascript" charset="UTF-8">
-      document.addEventListener('DOMContentLoaded', function () {
-        cookieconsent.run({
-          "notice_banner_type":"headline",
-          "consent_type":"express",
-          "palette":"light",
-          "language":"de",
-          "page_load_consent_levels":["strictly-necessary"],
-          "notice_banner_reject_button_hide":false,
-          "preferences_center_close_button_hide":false,
-          "page_refresh_confirmation_buttons":false,
-          "website_name":"FLAS-Forum",
-          "website_privacy_policy_url":"https://disqus.com/privacy-policy"
-        });
-      });
-    </script>
-    <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+    <!-- Kommentarbereich (Commento, nur nach Cookie-Zustimmung) -->
+    <section id="kommentare" class="neuer-abschnitt">
+      <h2>Kommentare</h2>
+      <div id="commento"></div>
+    </section>
+    <script type="text/plain" data-cookie-consent="tracking" defer src="https://cdn.commento.io/js/commento.js"></script>
+
   </main>
 </body>
 </html>
