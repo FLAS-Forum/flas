@@ -9,11 +9,12 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding-top: 90px;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   line-height: 1.6;
-  color: #333;
-  background-color: #fefefe;
+  color: #2c2c2c;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* --- Fonts --- */
@@ -38,21 +39,21 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #3a9ecb;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #3a9ecb, #2e86b2);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   z-index: 1000;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  backdrop-filter: blur(6px);
 }
 
 .title {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
@@ -60,15 +61,18 @@ body {
 }
 
 .shop-link {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  white-space: nowrap;
-  transition: 0.2s;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0.1);
+  transition: 0.3s;
 }
 
 .shop-link:hover {
-  text-decoration: underline;
+  background-color: rgba(255,255,255,0.2);
+  text-decoration: none;
 }
 
 /* --- Text + Bild --- */
@@ -86,16 +90,22 @@ body {
   flex: 1 1 300px;
   min-width: 300px;
   max-width: 50%;
-  padding: 10px;
+  padding: 15px;
 }
 
 .bildbereich img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   display: block;
   margin: 0 auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bildbereich img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 
 /* --- Video + Text --- */
@@ -113,16 +123,21 @@ body {
   flex: 1 1 300px;
   min-width: 300px;
   max-width: 50%;
-  padding: 10px;
+  padding: 15px;
 }
 
 .video-bereich video {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   display: block;
   margin: 0 auto;
+  transition: box-shadow 0.3s;
+}
+
+.video-bereich video:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
 .videotext-bereich h2, .videotext-bereich h3 {
@@ -134,6 +149,14 @@ body {
   max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s;
+}
+
+.neuer-abschnitt:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .neuer-abschnitt h2 {
@@ -158,16 +181,28 @@ body {
   color: #007bff;
   text-decoration: none;
   font-size: 1.1rem;
-  border-bottom: 1px solid transparent;
-  transition: 0.2s, border-bottom-color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: 0.3s, border-bottom-color 0.3s;
 }
 
 .spezial-link:hover {
   border-bottom-color: #007bff;
+  color: #0056b3;
+}
+
+/* --- Kommentarbereich --- */
+#kommentare {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 25px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s;
 }
 
 /* --- Responsive --- */
-/* Unter 700px (Handy) */
 @media (max-width: 700px) {
   body {
     padding-left: 5px;
@@ -184,7 +219,6 @@ body {
   }
 }
 
-/* Sehr breite Bildschirme */
 @media (min-width: 1200px) {
   .bildbereich {
     max-width: 30%;
@@ -193,13 +227,4 @@ body {
   .textbereich {
     max-width: 70%;
   }
-}
-/* Kommentarbereich */
-#kommentare {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+    }
