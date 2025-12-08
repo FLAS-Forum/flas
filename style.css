@@ -116,78 +116,7 @@ section {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* --- Video + Text --- */
-.video-text-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-}
 
-.video-bereich {
-  flex: 1 1 300px;
-  min-width: 300px;
-  max-width: 500px;
-}
-
-.video-bereich video {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: box-shadow 0.3s;
-}
-
-.video-bereich video:hover {
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.videotext-bereich {
-  flex: 1 1 300px;
-  min-width: 300px;
-  max-width: 600px;
-}
-
-/* --- Produkt Cards --- */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.product-card {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-}
-
-.product-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.product-card p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #444;
-}
-
-.product-card .price {
-  font-weight: 700;
-  color: #007bff;
-  font-size: 1.1rem;
-}
 
 /* --- Weitere Links --- */
 .links-abschnitt {
