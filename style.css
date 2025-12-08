@@ -10,7 +10,7 @@
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
-  padding-top: 90px;
+  padding-top: 150px; /* Platz für Banner + Header */
   padding-left: 2%;
   padding-right: 2%;
   line-height: 1.6;
@@ -41,7 +41,7 @@ body {
 ============================================ */
 .header {
   position: fixed;
-  top: 0;
+  top: 60px; /* Bannerhöhe */
   left: 0;
   right: 0;
   width: 100%;
@@ -166,22 +166,26 @@ section {
 }
 
 /* ============================================
-   BONUS: MODERNER GLASSMORPHISM-BANNER (für Hinweis)
+   8. HINWEIS-BANNER (GLASSMORPHISM, FIXED)
 ============================================ */
 .hinweis-banner {
-  margin: 20px auto 40px;
-  padding: 14px 22px;
-  max-width: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
-  background: rgba(255, 255, 255, 0.35);
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.5);
+  z-index: 1100; /* Über Header */
+  padding: 14px 22px;
+
+  background: rgba(255, 235, 59, 0.9);
+  border-radius: 0 0 14px 14px;
+  backdrop-filter: blur(8px);
 
   font-weight: bold;
   text-align: center;
   color: #222;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
   animation: fadeIn 0.6s ease;
 }
 
@@ -201,7 +205,7 @@ section {
 }
 
 /* ============================================
-   8. RESPONSIVE
+   9. RESPONSIVE
 ============================================ */
 @media (max-width: 700px) {
   body {
