@@ -189,3 +189,31 @@ section {
     max-width: 60%;
   }
 }
+/* --- Hinweis-Banner (Forum zieht um) --- */
+.hinweis-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #ffeb3b;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+
+  z-index: 1500;
+  border-bottom: 2px solid #e0c200;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hinweis-banner a {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+body {
+  /* verschiebt den Seiteninhalt nach unten,
+     damit Banner + Header nicht den Inhalt überdecken */
+  padding-top: 140px; /* vorher 90px – jetzt Banner + Header */
+}
