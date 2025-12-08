@@ -1,4 +1,6 @@
-/* --- Global --- */
+/* ============================================
+   1. RESET & GLOBAL
+============================================ */
 *,
 *::before,
 *::after {
@@ -17,7 +19,9 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- Fonts --- */
+/* ============================================
+   2. FONTS
+============================================ */
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/Roboto-Regular.ttf') format('truetype');
@@ -32,7 +36,9 @@ body {
   font-style: normal;
 }
 
-/* --- Header --- */
+/* ============================================
+   3. HEADER
+============================================ */
 .header {
   position: fixed;
   top: 0;
@@ -72,17 +78,20 @@ body {
 
 .shop-link:hover {
   background-color: rgba(255,255,255,0.2);
-  text-decoration: none;
 }
 
-/* --- Allgemeine Section Styles --- */
+/* ============================================
+   4. SECTIONS
+============================================ */
 section {
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
-/* --- Text + Bild --- */
+/* ============================================
+   5. TEXT + IMG CONTAINER
+============================================ */
 .text-bild-container {
   display: flex;
   flex-wrap: wrap;
@@ -116,9 +125,9 @@ section {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-
-
-/* --- Weitere Links --- */
+/* ============================================
+   6. LINKS (Buttons / Extra-Links)
+============================================ */
 .links-abschnitt {
   display: flex;
   flex-wrap: wrap;
@@ -135,7 +144,7 @@ section {
   padding: 8px 16px;
   border-radius: 12px;
   border: 1px solid #007bff;
-  transition: 0.3s, color 0.3s, background-color 0.3s;
+  transition: 0.3s;
 }
 
 .spezial-link:hover {
@@ -143,7 +152,9 @@ section {
   color: #fff;
 }
 
-/* --- Kommentarbereich --- */
+/* ============================================
+   7. KOMMENTAR-BEREICH
+============================================ */
 #kommentare {
   max-width: 1000px;
   margin: 60px auto;
@@ -154,19 +165,59 @@ section {
   transition: box-shadow 0.3s;
 }
 
-/* --- Responsive --- */
+/* ============================================
+   BONUS: MODERNER GLASSMORPHISM-BANNER (für Hinweis)
+============================================ */
+.hinweis-banner {
+  margin: 20px auto 40px;
+  padding: 14px 22px;
+  max-width: 1000px;
+
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.5);
+
+  font-weight: bold;
+  text-align: center;
+  color: #222;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+.hinweis-banner a {
+  color: #0057b8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hinweis-banner a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   8. RESPONSIVE
+============================================ */
 @media (max-width: 700px) {
   body {
     padding-left: 5px;
     padding-right: 5px;
   }
 
-  .textbereich, .bildbereich,
-  .video-bereich, .videotext-bereich {
+  .textbereich,
+  .bildbereich,
+  .video-bereich,
+  .videotext-bereich {
     max-width: 100%;
   }
 
-  .text-bild-container, .video-text-container {
+  .text-bild-container,
+  .video-text-container {
     gap: 15px;
   }
 
@@ -188,32 +239,4 @@ section {
   .textbereich {
     max-width: 60%;
   }
-}
-/* --- Hinweis-Banner (Forum zieht um) --- */
-.hinweis-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  background-color: #ffeb3b;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1rem;
-
-  z-index: 1500;
-  border-bottom: 2px solid #e0c200;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.hinweis-banner a {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-body {
-  /* verschiebt den Seiteninhalt nach unten,
-     damit Banner + Header nicht den Inhalt überdecken */
-  padding-top: 140px; /* vorher 90px – jetzt Banner + Header */
 }
