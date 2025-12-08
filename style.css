@@ -204,6 +204,13 @@ section {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.hinweis-banner #countdown {
+  font-size: 0.85rem;
+  color: #222;
+  margin-top: 5px;
+}
+
+
 /* ============================================
    9. RESPONSIVE
 ============================================ */
